@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "TASA project",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-stm32-bluepill",
+      "id": "mcu",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -40,
+      "left": 150,
+      "attrs": { "value": "50" }
+    }
+  ],
+  "connections": [
+    [ "pot1:SIG", "mcu:PA0", "green", [] ],
+    [ "pot1:VCC", "mcu:3V3", "red", [] ],
+    [ "pot1:GND", "mcu:GND", "black", [] ],
+    [ "mcu:TX", "$serialMonitor:RX", "", [] ],
+    [ "mcu:RX", "$serialMonitor:TX", "", [] ]
+  ]
+}
