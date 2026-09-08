@@ -1,4 +1,4 @@
-// Auto-generated synthetic PQD waveform. See notes/generate_waveform.py
+// Auto-generated synthetic PQD waveform.
 // 1000 samples at 50 Hz = 20 s. Values are simulated ADC counts (0-1023).
 #pragma once
 constexpr size_t WAVEFORM_LEN = 1000;
